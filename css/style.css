@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Oswald:wght@500;600;700&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+body {
+    font-family: "Atkinson Hyperlegible", Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    color: #131516;
+    background-color: #f5f5f5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+main {
+    padding: 1rem;
+    background-color: #ffffff;
+}
+
+.skip {
+    position: absolute;
+    top: -50px;
+    left: 10px;
+    background-color: #ffcb05;
+    color: #00274c;
+    padding: 0.75rem 1rem;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.skip:focus {
+    top: 10px;
+}
+
+header {
+    background-color: #00274c;
+    color: #ffffff;
+    padding: 1rem;
+    border-bottom: 0.5rem solid #ffcb05;
+}
+
+header > img {
+    display: block;
+    width: 8rem;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: flex;
+}
+
+nav a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem 0.5rem;
+    background-color: #ffffff;
+    color: #00274c;
+    text-decoration: none;
+    font-weight: bold;
+    border-left: 0.35rem solid #ffcb05;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #ffcb05;
+    color: #00274c;
+    text-decoration: underline;
+}
+
+nav a[aria-current="page"] {
+    background-color: #ffcb05;
+    color: #00274c;
+    border-left: 0.35rem solid #ffffff;
+    text-decoration: underline;
+}
+
+header h1 {
+    margin-top: 1.25rem;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    line-height: 1.1;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+}
+
+section,
+aside {
+    margin-bottom: 2rem;
+}
+
+section h2,
+aside h2 {
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    color: #00274c;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border-left: 0.5rem solid #ffcb05;
+    border-bottom: 0.15rem solid #00274c;
+}
+
+article {
+    margin: 1rem 0;
+}
+
+article h3 {
+    font-family: "Atkinson Hyperlegible", Arial, Helvetica, sans-serif;
+    color: #00274c;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+main ul,
+main ol {
+    margin: 0 0 1rem 1.5rem;
+}
+
+main li {
+    margin-bottom: 0.5rem;
+}
+
+main a {
+    color: #00274c;
+    font-weight: bold;
+}
+
+main a:hover,
+main a:focus {
+    background-color: #ffcb05;
+    color: #00274c;
+    text-decoration: none;
+}
+
+main img {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+main > section:first-child {
+    background-color: #00274c;
+    color: #ffffff;
+    padding: 1rem;
+    border-bottom: 0.5rem solid #ffcb05;
+    margin-bottom: 2rem;
+}
+
+main > section:first-child h2 {
+    color: #ffffff;
+    border-left-color: #ffcb05;
+    border-bottom-color: #ffcb05;
+}
+
+main > section:first-child iframe {
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Homepage Cards */
+
+.stage-section,
+.program-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.stage-section h2,
+.stage-section > p,
+.program-section h2,
+.program-section > p {
+    grid-column: 1 / -1;
+}
+
+.program-section article {
+    display: grid;
+    grid-template-columns: 0.4rem 1fr;
+    column-gap: 0.75rem;
+    padding: 1rem;
+    border: 0.15rem solid #00274c;
+    background-color: #f5f5f5;
+}
+
+.program-section article::before {
+    content: "";
+    grid-column: 1;
+    grid-row: 1 / 3;
+    background-color: #ffcb05;
+}
+
+.program-section article h3,
+.program-section article p {
+    grid-column: 2;
+}
+
+.stage-section article,
+.program-section article {
+    padding: 1rem;
+    border: 0.15rem solid #00274c;
+    border-left: 0.6rem solid #ffcb05;
+    background-color: #f5f5f5;
+}
+
+.stage-section article:nth-of-type(even),
+.program-section article:nth-of-type(even) {
+    border-left: 0.15rem solid #00274c;
+    border-right: 0.6rem solid #ffcb05;
+    background-color: #f5f5f5;
+}
+
+.program-section article h3 a {
+    font-size: 1.1em;
+    text-decoration-thickness: 0.12em;
+    text-underline-offset: 0.2em;
+}
+
+.program-section article p {
+    margin-bottom: 0;
+}
+
+.stage-section article a {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    background-color: #00274c;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 0.25rem solid #ffcb05;
+}
+
+.stage-section article a:hover,
+.stage-section article a:focus {
+    background-color: #ffcb05;
+    color: #00274c;
+    text-decoration: underline;
+}
+
+footer {
+    background-color: #00274c;
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+    border-top: 0.5rem solid #ffcb05;
+}
+
+footer a {
+    color: #ffcb05;
+    font-weight: bold;
+}
+
+footer p {
+    margin-bottom: 0.75rem;
+}
+
+footer p:last-child {
+    margin-bottom: 0;
+}
+
+/* Preparing Page */
+
+.prep-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 1rem 0 2rem;
+}
+
+.prep-grid article:first-child {
+    grid-column: 1 / -1;
+}
+
+.prep-grid article {
+    margin: 0;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    border: 0.15rem solid #00274c;
+    border-top: 0.5rem solid #ffcb05;
+}
+
+.questions {
+    padding: 1rem;
+    background-color: #ffcb05;
+    color: #00274c;
+    border-left: 0.5rem solid #00274c;
+}
+
+.questions ul {
+    margin-bottom: 0;
+}
+
+/* Preparation Resources */
+
+.resources {
+    margin-top: 2rem;
+}
+
+.resources h3 {
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 0.02em;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.15rem solid #00274c;
+}
+
+.resources ul {
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+    counter-reset: resource;
+}
+
+.resources li {
+    counter-increment: resource;
+    padding: 1rem 0.75rem 1rem 3.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    border-bottom: 0.1rem solid #00274c;
+}
+
+.resources li::before {
+    content: "0" counter(resource);
+    position: absolute;
+    left: 0.5rem;
+    top: 0.75rem;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #00274c;
+}
+
+.resources li:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+.resources a {
+    text-decoration-thickness: 0.12em;
+    text-underline-offset: 0.2em;
+}
+
+/* Starting Page */
+
+.start-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1rem 0 2rem;
+    counter-reset: start-step;
+}
+
+.start-grid article {
+    counter-increment: start-step;
+    position: relative;
+    margin: 0;
+    padding: 1rem 1rem 1rem 4rem;
+    background-color: #f5f5f5;
+    border: 0.15rem solid #00274c;
+    border-bottom: 0.5rem solid #ffcb05;
+}
+
+.start-grid article::before {
+    content: "0" counter(start-step);
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #00274c;
+}
+
+.start-grid article:nth-child(even) {
+    background-color: #00274c;
+    color: #ffffff;
+}
+
+.start-grid article:nth-child(even) h3,
+.start-grid article:nth-child(even)::before {
+    color: #ffffff;
+}
+
+/* After Page */
+
+.after-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 1rem 0 2rem;
+}
+
+.after-grid article {
+    margin: 0;
+    padding: 1rem;
+    background-color: #ffffff;
+    border: 0.15rem solid #00274c;
+    border-left: 0.6rem solid #ffcb05;
+}
+
+.after-grid article:nth-child(2) {
+    background-color: #00274c;
+    color: #ffffff;
+    border-left-color: #ffcb05;
+}
+
+.after-grid article:nth-child(2) h3 {
+    color: #ffffff;
+}
+
+.after-grid article:nth-child(3) {
+    border-left: 0.15rem solid #00274c;
+    border-right: 0.6rem solid #ffcb05;
+}
