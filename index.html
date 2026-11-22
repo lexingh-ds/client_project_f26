@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <header>
@@ -70,7 +71,65 @@
     </article>
   </section>
 
-   <section class="program-section">
+
+ <section class="resource-filter">
+    <h2>Find Resources by Stage</h2>
+    <p>
+        Select your current stage of engaged learning to find
+        useful resources and guidance.
+    </p>
+
+    <div class="filter-buttons">
+        <button type="button" data-filter="all">All Resources</button>
+        <button type="button" data-filter="prep">Preparing</button>
+        <button type="button" data-filter="start">Starting</button>
+        <button type="button" data-filter="after">After</button>
+    </div>
+
+    <div class="filter-results">
+
+        <article class="filter-item" data-stage="prep">
+            <h3>Social Identity Snapshot</h3>
+            <p>Reflect on your identity and assumptions before beginning a project.</p>
+            <a href="https://sites.lsa.umich.edu/equitable-teaching/social-identity-snapshot">Open Social Identity Snapshot</a>
+        </article>
+
+        <article class="filter-item" data-stage="prep">
+            <h3>Project Scoping Handout</h3>
+            <p>Define project goals, needs, and expectations.</p>
+            <a href="https://docs.google.com/document/d/1TrEDolwmOIlXgYgAP9VvlOGoYOwFfe6KxzZOgZSVYVw/edit?usp=drive_link">Open Project Scoping Handout</a>
+        </article>
+
+        <article class="filter-item" data-stage="start">
+            <h3>Initial Client Email Examples</h3>
+            <p>Prepare professional communication with project partners.</p>
+            <a href="https://docs.google.com/document/d/1fWFXwoW5fKX_Tctn97Gio5XZDwILNlqIOyKKE8Yk5J0/edit?usp=drive_link">Open Email Examples</a>
+        </article>
+
+        <article class="filter-item" data-stage="start">
+            <h3>Client Meeting Sample Agenda</h3>
+            <p>Plan your first project meeting.</p>
+            <a href="https://docs.google.com/document/d/1ItXxYauAcPoaGMUZWuJsX-OLFfGmeBOWT7JNhoZxGyU/edit?usp=drive_link">Open Meeting Agenda</a>
+        </article>
+
+        <article class="filter-item" data-stage="after">
+            <h3>Project Experience on Resumes</h3>
+            <p>Translate your project experience into resume content.</p>
+            <a href="https://docs.google.com/document/d/1mjyX6jgqXFrY7SFYaA3J2cTh1ZnHH0FKF5aUKfXzXKo/edit?tab=t.0">Open Resume Guide</a>
+        </article>
+
+        <article class="filter-item" data-stage="after">
+            <h3>STAR Method Reflection Sheet</h3>
+            <p>Prepare examples for interviews and reflection.</p>
+            <a href="https://careercenter.umich.edu/content/interviewing-resources">Open Interviewing Resources</a>
+        </article>
+
+    </div>
+
+    <p id="filter-status" role="status" aria-live="polite"></p>
+  </section>
+
+ <section class="program-section">
     <h2>Featured Programs</h2>
     <p>Explore opportunities to collaborate with organizations, communities, student teams, and partners in Michigan and beyond.</p>
     <article>
@@ -126,7 +185,11 @@
       <address>
         <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
       </address>
-      <p>&copy; 2026 Regents of the University of Michigan</p>
+      <p>&copy; <span id="year">2026</span> Regents of the University of Michigan</p>
     </footer>
+
+    <script src="js/script.js"></script>
+
+
 </body>
 </html>

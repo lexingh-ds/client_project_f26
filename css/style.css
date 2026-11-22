@@ -504,6 +504,69 @@ footer p:last-child {
 }
 
 
+/* Interactive Resource Filter */
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.filter-buttons button {
+    padding: 0.75rem 1rem;
+    background-color: #ffffff;
+    color: #00274c;
+    border: 0.15rem solid #00274c;
+    font-family: "Atkinson Hyperlegible", Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.filter-buttons button:hover,
+.filter-buttons button:focus {
+    background-color: #ffcb05;
+}
+
+.filter-buttons button[aria-pressed="true"] {
+    background-color: #00274c;
+    color: #ffffff;
+    border-bottom: 0.3rem solid #ffcb05;
+}
+
+.filter-results {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.filter-item {
+    margin: 0;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    border: 0.15rem solid #00274c;
+    border-left: 0.5rem solid #ffcb05;
+}
+
+.filter-item[hidden] {
+    display: none;
+}
+
+.filter-buttons button:focus-visible {
+    outline: 0.2rem solid #00274c;
+    outline-offset: 0.2rem;
+}
+
+.filter-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-item a {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
 @media (min-width: 1024px) {
 
 
@@ -614,6 +677,10 @@ footer p:last-child {
     margin-top: auto;
     align-self: flex-start;
     }
+
+    .filter-results {
+        grid-template-columns: repeat(3, 1fr);
+    }    
 
 }
 
