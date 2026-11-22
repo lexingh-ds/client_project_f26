@@ -456,3 +456,165 @@ footer p:last-child {
     border-left: 0.15rem solid #00274c;
     border-right: 0.6rem solid #ffcb05;
 }
+
+
+/* 404 Page */
+
+.error-message {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.error-message h2 {
+    font-size: 3rem;
+    text-align: center;
+    border-left: none;
+    border-bottom: 0.3rem solid #ffcb05;
+}
+
+.home-link {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #ffcb05;
+    color: #00274c;
+    border: 0.15rem solid #00274c;
+}
+
+.error-resources {
+    margin-top: 2rem;
+}
+
+.error-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.error-grid article {
+    padding: 1.5rem;
+    margin: 0;
+    background-color: #f5f5f5;
+    border: 0.15rem solid #00274c;
+    border-left: 0.5rem solid #ffcb05;
+}
+
+.error-grid article a {
+    display: inline-block;
+    margin-top: 0.75rem;
+}
+
+
+@media (min-width: 1024px) {
+
+
+    main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    section h2,
+    aside h2 {
+        font-size: 2rem;
+    }
+
+
+    nav ul {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    nav a {
+        justify-content: center;
+        text-align: center;
+    }
+
+
+    .stage-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .program-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .prep-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .prep-grid article:first-child {
+        grid-column: auto;
+    }
+
+    .start-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .start-grid article {
+        padding: 3.5rem 1rem 1rem;
+    }
+
+    .after-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    footer {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .stage-section,
+    .program-section {
+        gap: 1.5rem;
+    }
+
+    .stage-section article,
+    .program-section article {
+        padding: 1.5rem;
+    }
+
+    .stage-section article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stage-section article a {
+        margin-top: auto;
+        align-self: flex-start;
+    }
+
+
+    .error-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+
+    .error-message {
+        padding: 3rem 2rem;
+    }
+
+    .error-message h2 {
+        font-size: 4rem;
+    }
+
+    .error-grid article {
+    display: flex;
+    flex-direction: column;
+    }
+    
+    .error-grid article a {
+    margin-top: auto;
+    align-self: flex-start;
+    }
+
+}
+
+
